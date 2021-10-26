@@ -19,9 +19,11 @@
  */
 
 const HDWalletProvider = require('@truffle/hdwallet-provider');
-require('dotenv').config()
-const MNEMONIC = process.env.MNEMONIC
-const API_KEY = process.env.NODE_KEY
+const path = require('path')
+require('dotenv').config({ path: path.resolve(__dirname, '.env') });
+//require('dotenv').config();
+const MNEMONIC = "unknown dose neglect torch design repeat leader seat disorder blade decide elegant"
+const API_KEY = "39caa062f4d8963de63210c63d314f8116c5ef7a"
 module.exports = {
   /**
    * Networks define how you connect to your ethereum client and let you set the

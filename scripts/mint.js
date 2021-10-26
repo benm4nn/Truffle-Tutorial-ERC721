@@ -8,17 +8,15 @@ require('dotenv').config()
 const MNEMONIC = process.env.MNEMONIC
 const API_KEY = process.env.NODE_KEY
 
-
 //* Remember to write the nft address in manually after deploying the contract
 const NFT_CONTRACT_ADDRESS = ""
-const OWNER_ADDRESS = "";
+const OWNER_ADDRESS = "0xBb5859a11b88721a7004a2AA0f0874Db2819d379";
 const MUMBAI = `https://rpc-mumbai.maticvigil.com/v1/${API_KEY}`
 const MATIC = `https://rpc-mainnet.maticvigil.com/v1/${API_KEY}`
-const NUM_ITEMS = 5;
-
+const NUM_ITEMS = 10000;
 
 //*Parse the contract artifact for ABI reference.
-let rawdata = fs.readFileSync(path.resolve(__dirname, "../build/contracts/GameItem.json"));
+let rawdata = fs.readFileSync(path.resolve(__dirname, "../build/contracts/KrazyPhace.json"));
 let contractAbi = JSON.parse(rawdata);
 const NFT_ABI = contractAbi.abi
 
