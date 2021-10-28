@@ -18,12 +18,19 @@
  *
  */
 
+require('dotenv').config();
 const HDWalletProvider = require('@truffle/hdwallet-provider');
-const path = require('path')
-require('dotenv').config({ path: path.resolve(__dirname, '.env') });
+
+const MNEMONIC = process.env.MNEMONIC
+const API_KEY = process.env.NODE_KEY
+
+//const { MNEMONIC, API_KEY } = require("env.js");
+//const path = require('path');
+//require('dotenv').config({ path: path.resolve(__dirname, '.env') });
 //require('dotenv').config();
-const MNEMONIC = "unknown dose neglect torch design repeat leader seat disorder blade decide elegant"
-const API_KEY = "39caa062f4d8963de63210c63d314f8116c5ef7a"
+//const MNEMONIC = process.env.MNEMONIC
+//const API_KEY = process.env.NODE_KEY
+
 module.exports = {
   /**
    * Networks define how you connect to your ethereum client and let you set the
@@ -48,8 +55,8 @@ module.exports = {
       },
       network_id: 80001,
       confirmations: 2,
-      skipDryRun: true
-
+      skipDryRun: true,
+      networkCheckTimeout: 90000
     },
     matic: {
       provider: function () {
@@ -59,8 +66,10 @@ module.exports = {
       gas: 5000000,
       gasPrice: 5000000000,
       confirmations: 2,
+      networkCheckTimeout: 90000
     },
   },
+
 
   // Set default mocha options here, use special reporters etc.
   mocha: {

@@ -246,11 +246,7 @@ contract KrazyPhace is ERC721, ContextMixin, NativeMetaTransaction {
     }
 
 /*
-    function mintItem(address player, string memory tokenURI)
-        public
-        onlyOwner
-        returns (uint256)
-    {
+    function mintItem (address player, string memory tokenURI) public onlyOwner returns (uint256) {
         _tokenIds.increment();
         uint256 newItemId = _tokenIds.current();
         _mint(player, newItemId);
@@ -258,7 +254,6 @@ contract KrazyPhace is ERC721, ContextMixin, NativeMetaTransaction {
         return newItemId;
     }
 */
-
     /**
      * This is used instead of msg.sender as transactions won't be sent by the original token owner, but by OpenSea.
      */

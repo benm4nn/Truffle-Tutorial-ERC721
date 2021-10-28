@@ -7,8 +7,8 @@ require('dotenv').config()
 const MNEMONIC = process.env.MNEMONIC
 const API_KEY = process.env.NODE_KEY
 
-const NFT_CONTRACT_ADDRESS = ""
-const OWNER_ADDRESS = "";
+const NFT_CONTRACT_ADDRESS = "0x3Ce4121E6F081bbdD82cD084C9EE1673f5029B84"
+const OWNER_ADDRESS = "0xBb5859a11b88721a7004a2AA0f0874Db2819d379"
 const MUMBAI = `https://rpc-mumbai.maticvigil.com/v1/${API_KEY}`
 const MATIC = `https://rpc-mainnet.maticvigil.com/v1/${API_KEY}`
 const NUM_ITEMS = 5;
